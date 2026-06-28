@@ -51,6 +51,7 @@ provide('checkAdminPassword', checkAdminPassword)
 
 function trackWhatsApp() {
   trackEvent('whatsapp_click', { source: 'floating_button' })
+  ttq.track('Contact', { content_name: 'whatsapp', content_category: 'contact', source: 'floating_button' })
 }
 
 onMounted(() => {

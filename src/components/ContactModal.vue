@@ -77,6 +77,7 @@ const submitted = ref(false)
 function handleSubmit() {
   submitted.value = true
   trackEvent('form_submit', { name: form.name, type: form.type })
+  ttq.track('SubmitForm', { content_name: form.type, content_category: 'contact', name: form.name })
   addDocument('clients', {
     name: form.name,
     phone: form.phone,
